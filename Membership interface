@@ -1,0 +1,17 @@
+package membership;
+
+public interface Membership {
+    double getPrice();
+
+    default void printBenefits() {
+        System.out.println("Polzi: Dostup do fitnes uredite.");
+    }
+
+    static void printGymRules() {
+        System.out.println("\nGYM RULES: ");
+        System.out.println("1. Vseki klient trqbva da ima membership");
+        System.out.println("2. Pazete zalata chista");
+        System.out.println("3. Premium members imat dostup do sauna.");
+        System.out.println("4. Podrejdaite tejestite i uredite si.");
+    }
+}

@@ -1,0 +1,30 @@
+import membership.BasicMembership;
+import membership.PremiumMembership;
+import membership.Membership;
+import models.customer;
+import services.GymService;
+
+import java.lang.classfile.CustomAttribute;
+
+public class Main {
+    public static void main(String[]args){
+
+        Membership.printGymRules();
+        GymService gymService = new GymService();
+
+        customer customer1 = new customer("Pencho", 30, new PremiumMembership() );
+        customer customer2 = new customer("Liliq", 23, new BasicMembership());
+        customer customer3 = new customer("Mitko", 16, new BasicMembership());
+
+        gymService.addCustomer(customer1);
+        gymService.addCustomer(customer2);
+        gymService.addCustomer(customer3);
+
+        System.out.print("Klienti: ");
+
+        gymService.printAllCustomers();
+
+        System.out.println("Broy na klienti: " + gymService.getCustomerCount());
+    }
+}
+
